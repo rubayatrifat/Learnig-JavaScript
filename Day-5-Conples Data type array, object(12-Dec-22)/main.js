@@ -22,7 +22,7 @@ console.log(manTotho[lasteleAray])
 // *** Object ***
 
 let firstObj = {
-    firstName : 'Rifat',
+    firstName : 'Rubayat',
     lastName : 'Islam',
     age : 12
 }
