@@ -1,0 +1,31 @@
+Git Extra:
+
+Many extra comand that will help us. 
+
+Update your uploted project by:
+
+1. git add -A
+2. git commit -m "your new messgese"
+3. git push
+
+Another command
+1. git push origin feature/templating [Push loacal changes to remote Branch]
+
+2. git branch [How Mouch Branch & check now branch] 
+
+3. git branch development (branch name) [Create new branch]
+
+4. git checkout development (branch name) [switched branch ]
+
+5. git merge main -m “merge on development with main” [merge]
+
+6. git push orgin main [Send Local to remote repo]
+
+7. git fetch [move remote to local only changes]
+
+8. git checkout -b html-backup [branch name] -- [ to go / create branch to a ]
+
+9. git pull origin feature/templating [ To copy remote changes to local brach ]
+
+10. git merge main [for merge]
+
