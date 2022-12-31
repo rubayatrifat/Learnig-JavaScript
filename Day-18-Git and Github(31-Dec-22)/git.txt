@@ -1,0 +1,24 @@
+Topic: Git and Github
+
+firstly we will download git and git hub and install. and aslo a creat acount in github.com
+we are ready for our work
+
+now we will login in git bash by following comand:
+
+1.git config user.name "your name"
+2.git config user.email "your email"
+3.git config user.password "your password"
+
+normally our git comand to push on git hub repository is:
+
+1. git init
+2. git add .
+3. git git commit -m "Your messege"
+4. git remote add origin https:your repository link
+5. git push u- orign master     
+
+another comand
+
+1. git --version [To chak git hub version]
+2. git clone git@example.com:project-name.git [to clone a project]
+
