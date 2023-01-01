@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(img/sky.jpg);    
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.gameplay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #fff;
+    padding: 50px 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.gameplay h1 {
+    font-family: candara;
+    font-size: 26px;
+    margin-bottom: 11px;
+}
+.gameplay h4 {
+    font-family: tahoma;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+form {
+    margin-top: 21px;
+    margin-bottom: 21px;
+}
+form input {
+    display: block;
+    margin: auto;
+    margin-bottom: 9px;
+}
+form .win-inptut {
+    padding: 8px 14px;
+}
+form .submit {
+    padding: 11px 18px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form .resetBtn {
+    padding: 11px 18px;
+    font-size: 13px;
+    background: teal;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pl-1-btn {
+    padding: 11px 18px;
+    font-size: 13px;
+    border-color: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pl-2-btn {
+    padding: 11px 18px;
+    font-size: 13px;
+    border-color: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.win-player {
+    position: absolute;
+    top: 119px;
+    left: 53px;
+    background: #fff;
+    padding: 14px 20px;
+    color: #000;
+    border-radius: 6px;
+    font-family: tahoma;
+    font-size: 18px;
+    cursor: pointer;
+}
