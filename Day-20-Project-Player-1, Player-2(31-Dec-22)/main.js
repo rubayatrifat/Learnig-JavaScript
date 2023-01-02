@@ -1,7 +1,7 @@
 
 (() => {
 
-    // ===================== DOM's ========================
+     // ===================== DOM's ========================
 
 const winPlayer =  document.querySelector('.win-player')
 const fullForm =  document.querySelector('form')
@@ -168,7 +168,6 @@ resetBtn.addEventListener('click', evt => {
     // win messege resit
     winPlayer.textContent = ""
 })
-
 
 
 })()

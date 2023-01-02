@@ -3,11 +3,26 @@
     padding: 0;
 }
 body{
-    background-image: url(img/sky.jpg);    
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100vh;
+    animation: img-change 5s infinite;
 }
+@keyframes img-change{
+    0%{
+        background-image: url(img/sky.jpg);
+    }
+    30%{
+        background-image: url(img/evining.jpg);
+    }
+    60%{
+        background-image: url(img/nature.jpg);
+    }
+    100%{
+        background-image: url(img/sky.jpg);
+    }
+}
+
 .gameplay {
     position: absolute;
     top: 50%;
@@ -81,3 +96,5 @@ form .resetBtn {
     font-size: 18px;
     cursor: pointer;
 }
+
+
