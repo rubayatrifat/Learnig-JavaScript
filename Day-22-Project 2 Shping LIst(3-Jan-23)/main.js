@@ -50,6 +50,7 @@ function addProductName(name, price){
 }
 
 function showProducttoUI(productInfo){
+    proList.textContent = ""
     const {id, proName, proPrice} = productInfo
 
     const element = `<li data-productId="${id}">
@@ -67,6 +68,21 @@ function showProducttoUI(productInfo){
 
 }
 
+function updateProduct(resivedProduct){
+    const updatedProducts = allProduct.map(product => {
+        if(product.id === resivedProduct){
+            return{
+                ...product,
+                name: resivedProduct.proName,
+                price: resivedProduct.proPrice
+            }
+        }else{
+            return product
+        }
+    })
+    console.log(updatedProducts)
+}
+
 
 function subRecive(evt){
     // stop the page loading
@@ -80,6 +96,22 @@ function subRecive(evt){
     
     proPrice.value = ""
     proName.value = ""
+
+    if(subEle.classList.contains('update-product')){
+        const id = Number(document.querySelector('.update-product').dataset.id)
+
+        const product = {
+            id,
+            proName,
+            proPrice
+        }
+        const updatedPro = updateProduct(product)
+        allProduct = updatedPro
+
+        showProducttoUI(allProduct)
+
+        return
+    }
     
     if(!isValid) return
     
@@ -111,12 +143,16 @@ function findProduct(id){
     return foundPro
 }
 
+
 function listToInput(product){
     proName.value = product.proName
     proPrice.value = product.proPrice
 
     subEle.textContent = "Update"
     subEle.classList.add('btn-scoundery')
+    subEle.classList.add('update-product')
+
+    subEle.setAttribute('data-id', product.id)
 }
 
 function handleManipulatepro(evt){
