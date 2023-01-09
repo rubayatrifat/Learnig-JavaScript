@@ -58,7 +58,7 @@ function showProducttoUI(productInfo){
                             <span>${proPrice} T.K</span>
                         </div>
                         <div class="action-btn">
-                            <i class="fa-solid fa-pencil"></i>
+                            <i class="fa-solid fa-pencil edit-li"></i>
                             <i class="fa-solid fa-trash-can delet-li"></i>
                         </div>
                     </li>`
@@ -105,14 +105,33 @@ function removeitem(id){
 function removeidformUI(id){
     document.querySelector(`[data-productId="${id}"]`).remove()
 }
-                              
+
+function findProduct(id){
+    const foundPro = allProduct.find(product => product.id === id)
+    return foundPro
+}
+
+function listToInput(product){
+    proName.value = product.proName
+    proPrice.value = product.proPrice
+
+    subEle.textContent = "Update"
+    subEle.classList.add('btn-scoundery')
+}
+
 function handleManipulatepro(evt){
+
+    const id = Number(getProductId(evt))
+
     if(evt.target.classList.contains('delet-li')){
-       const id = Number(getProductId(evt))
 
        removeitem(id)
 
        removeidformUI(id)
+    } else if(evt.target.classList.contains('edit-li')){
+        const foundPro = findProduct(id)
+
+        listToInput(foundPro)
     }
 }
 
