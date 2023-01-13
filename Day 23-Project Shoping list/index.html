@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css"
+    integrity="sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .card > .list-group {
+          border-top: none;
+          border-bottom: none;
+        }
+      </style>
+
+</head>
+<body>
+    
+    <div class="container" style="max-width: 800px">
+        <nav class="navbar navbar-light d-flex" style="background-color: #e3f2fd">
+          <h1 class="navbar-brand m-auto">Shopping List</h1>
+          <input
+            type="text"
+            name="filter"
+            class="form-control m-3"
+            id="filter"
+            placeholder="filter your product..."
+          />
+        </nav>
+  
+        <div class="card card-body">
+          <span class="msg"></span>
+          <ul class="list-group collection">
+          </ul>
+  
+          <form>
+            <div class="row mt-4">
+              <div class="col">
+                <input
+                  type="text"
+                  placeholder="product name"
+                  class="form-control nameInput"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  placeholder="product price"
+                  class="form-control priceInput"
+                />
+              </div>
+            </div>
+            <div class="d-grid mx-auto submit-btn">
+              <button class="btn mt-3 btn-primary btn-block" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

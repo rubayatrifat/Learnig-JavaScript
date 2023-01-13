@@ -1,0 +1,4 @@
+ul.list-group.collection {
+    height: 300px;
+    overflow: auto;
+}
