@@ -55,3 +55,25 @@ function loadRandomJock() {
 }
 
 btnElm.addEventListener('click', loadRandomJock)
+
+const btnElm2 = document.querySelector('.btn2')
+const outPutElm = document.querySelector('.out-put')
+
+async function loadProfiel() {
+   const res = await fetch('./sample.json')
+
+   const profiles = await res.json()
+
+   profiles.forEach((profile, index) => {
+       const {name, age, cell, isDevoloper} = profile
+
+       `
+       <h3>Profile -${index + 1}</h3>
+       <hr/>
+       <ul>
+           <li>${profile.name}</li> 
+       </ul>
+       `
+   })
+}
+btnElm2.addEventListener('click', loadProfiel)

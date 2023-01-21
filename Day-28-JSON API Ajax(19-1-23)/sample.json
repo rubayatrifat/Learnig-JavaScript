@@ -1,0 +1,26 @@
+[
+    {
+    "name": "Rifat",
+    "age": 13,
+    "cell": "01912819245",
+    "isDevoper": true
+},
+{
+    "name": "Nela",
+    "age": 22,
+    "cell": "01912345455",
+    "isDevoper": false
+},
+{
+    "name": "Obaydul",
+    "age": 30,
+    "cell": "0195678676",
+    "isDevoper": true
+},
+{
+    "name": "Nur",
+    "age": 5,
+    "cell": "0145567566",
+    "isDevoper": false
+}
+]
