@@ -51,6 +51,16 @@ const UI = {
         }
     },
 
+    resetInput() {
+        const { cityElm, countryElm } = this.loadSelactors()
+        cityElm.value = ""
+        countryElm.value = ""
+    },
+
+    handleRemoteData() {
+        watherData.getWeather()
+    },
+
     hideMessage() {
         const messageElm = document.querySelector('#message')
         setTimeout(() => {
@@ -65,8 +75,9 @@ const UI = {
         this.hideMessage()
     },
 
-    validateInputs(city, country) {
-        if(country === "" || city === "") {
+    validateInputs(country, city) {
+        // validation chek
+        if(country === '' || city === '') {
            this.showMessage('Please provide nessary information', 'danger')
            return true
         }else {
@@ -82,16 +93,6 @@ const UI = {
             country: countryElm.value,
             city: cityElm.value
         }
-    },
-
-    resetInput() {
-        const { cityElm, countryElm } = this.loadSelactors()
-        cityElm.value = ""
-        countryElm.value = ""
-    },
-
-    handleRemoteData() {
-        watherData.getWeather()
     },
 
     init() {
