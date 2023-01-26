@@ -5,9 +5,10 @@ const watherData = {
     country: '',
     API_KEY: '25bf98f2482337ff0a1464a9f9c47180',
     async getWeather() {
+        console.log(this.city)
         try{
             const res = await fetch(
-                `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.country}&units=metric&appid=${this.API_KEY}`
+                `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${API_KEY}`
                 )
             const {name, main, weather} = await res.json()
             
